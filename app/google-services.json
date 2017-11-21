@@ -1,0 +1,94 @@
+{
+  "project_info": {
+    "project_number": "964196060317",
+    "firebase_url": "https://mrulibrarybooking-bf238.firebaseio.com",
+    "project_id": "mrulibrarybooking-bf238",
+    "storage_bucket": "mrulibrarybooking-bf238.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:964196060317:android:c05109843a97007e",
+        "android_client_info": {
+          "package_name": "mru.booking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "964196060317-d67oaqjphi43ka8m93io0tutegn7sp1q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mru.booking",
+            "certificate_hash": "1619b7232445713a3d0a0a659df5d77dfed4c515"
+          }
+        },
+        {
+          "client_id": "964196060317-4ofp9b6n4124i7hktr4jkvgaurb7oadu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mru.booking",
+            "certificate_hash": "e3f953da1684388d307551b5f69c60b839b94da0"
+          }
+        },
+        {
+          "client_id": "964196060317-dsliue0tee8k2mt3na21pb3fj1jfmd92.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mru.booking",
+            "certificate_hash": "adda141a7a4ca33ec90188863d287b8d4ae6a183"
+          }
+        },
+        {
+          "client_id": "964196060317-86fv9vb5c8gh50eph7bpbsmi5b82sjv8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mru.booking",
+            "certificate_hash": "e3c1c28b053142f4287cf5c90f5333bba40918ca"
+          }
+        },
+        {
+          "client_id": "964196060317-p0mfbhs0jcqksm4f9sfpcd7fftd8jtcs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mru.booking",
+            "certificate_hash": "6e0329c787133397bc44d895a26d5cfa5b25c539"
+          }
+        },
+        {
+          "client_id": "964196060317-34tk8ose5ugb4rpop84oa0hl813k3rsg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwOTq6RqkkuF3Xdv42Llv_0QKn9Kmm3MM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "964196060317-bbftubvb7i7lp043vsdsg95ko5eaomq9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "mru.booking"
+              }
+            },
+            {
+              "client_id": "964196060317-34tk8ose5ugb4rpop84oa0hl813k3rsg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
