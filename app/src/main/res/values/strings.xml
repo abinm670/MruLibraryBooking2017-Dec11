@@ -2,7 +2,7 @@
     <string name="app_name"> MruLibraryBooking</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
+    <string name="prompt_email">Student Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
@@ -22,6 +22,8 @@
     <string name="email_registration">Email Registration</string>
     <string name="email">Email</string>
     <string name="confirm_password">Confirm Password</string>
+    <string name="new_booking">New booking</string>
+    <string name="Student_booking_info">Student Booking Info</string>
 
 
     <string name="cancel">CANCEL</string>
@@ -32,4 +34,6 @@
     <string name="current_password">Current Password</string>
     <string name="new_password">New Password</string>
     <string name="confirm_new_password">Confirm New Password</string>
+    <string name="Student_Booking_Info">Student Booking Info</string>
+    <string name="student_name">Student Name</string>
 </resources>

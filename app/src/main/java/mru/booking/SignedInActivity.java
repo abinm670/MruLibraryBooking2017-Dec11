@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -15,6 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class SignedInActivity extends AppCompatActivity {
 
     private static final String TAG = "SignedInActivity";
+
 
     //Firebase
     private FirebaseAuth.AuthStateListener mAuthListener;
@@ -31,7 +34,22 @@ public class SignedInActivity extends AppCompatActivity {
 
         setupFirebaseAuth();
 
+
+
+
+        Button newBoking = findViewById(R.id.newBooking);
+        newBoking.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent findRoom = new Intent(SignedInActivity.this,ViewRoomsActivity.class);
+                startActivity(findRoom);
+            }
+        }));
+
+
     }
+
+
 
 
 
@@ -68,6 +86,7 @@ public class SignedInActivity extends AppCompatActivity {
 
         return true;
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

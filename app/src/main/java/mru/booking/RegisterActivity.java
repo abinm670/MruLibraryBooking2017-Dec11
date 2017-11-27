@@ -19,16 +19,24 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class RegisterActivity extends AppCompatActivity {
 
     private static final String TAG = "RegisterActivity";
+    private static final String sName="" ;
 
     private static final String DOMAIN_NAME = "mtroyal.ca";
+    private DocumentReference mDocRef = FirebaseFirestore.getInstance().document("users/info");
+
 
     //widgets
-    private EditText mEmail, mPassword, mConfirmPassword;
+    private EditText mEmail, mPassword, mConfirmPassword, mName;
     private Button mRegister;
     private ProgressBar mProgressBar;
 
@@ -36,11 +44,14 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        mEmail = (EditText) findViewById(R.id.input_email);
-        mPassword = (EditText) findViewById(R.id.input_password);
-        mConfirmPassword = (EditText) findViewById(R.id.input_confirm_password);
-        mRegister = (Button) findViewById(R.id.btn_register);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar);
+
+
+        mEmail = findViewById(R.id.input_email);
+        mPassword = findViewById(R.id.input_password);
+        mConfirmPassword = findViewById(R.id.input_confirm_password);
+        mRegister = findViewById(R.id.btn_register);
+        mProgressBar = findViewById(R.id.progressBar);
+        mName = findViewById(R.id.student_name);
 
         mRegister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
                 //check for null valued EditText fields
                 if(!isEmpty(mEmail.getText().toString())
                         && !isEmpty(mPassword.getText().toString())
+                        && !isEmpty(mName.getText().toString())
                         && !isEmpty(mConfirmPassword.getText().toString())){
 
                     //check if user has a university email address
@@ -59,7 +71,9 @@ public class RegisterActivity extends AppCompatActivity {
                         if(doStringsMatch(mPassword.getText().toString(), mConfirmPassword.getText().toString())){
 
                             //Initiate registration task
+                            saveStudentData(mName.getText().toString());
                             registerNewEmail(mEmail.getText().toString(), mPassword.getText().toString());
+
                         }else{
                             Toast.makeText(RegisterActivity.this, "Passwords do not Match", Toast.LENGTH_SHORT).show();
                         }
@@ -70,6 +84,7 @@ public class RegisterActivity extends AppCompatActivity {
                 }else{
                     Toast.makeText(RegisterActivity.this, "You must fill out all the fields", Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
 
@@ -99,14 +114,52 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
 
+
+
+    // save data
+
+    public void saveStudentData(final String name)
+    {
+
+
+        Map<String,Object> dataToSave= new HashMap<String, Object>();
+        dataToSave.put(sName, name);
+        mDocRef.set(dataToSave).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                {
+                    Toast.makeText(RegisterActivity.this, "Data saved",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+
+                if (!task.isSuccessful())
+                {
+                    Toast.makeText(RegisterActivity.this, "Unable to save data",
+                            Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+
+
+    }
+
+
     /**
      * Register a new email and password to Firebase Authentication
-     * @param email
-     * @param password
+     * @paramEmail
+     * @paramPassword
      */
+
     public void registerNewEmail(final String email, String password){
 
         showDialog();
+
+
+
+
 
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -117,6 +170,10 @@ public class RegisterActivity extends AppCompatActivity {
                         if (task.isSuccessful()){
                             Log.d(TAG, "onComplete: AuthState: " + FirebaseAuth.getInstance().getCurrentUser().getUid());
                             sendVerificationEmail();
+
+
+
+
                             FirebaseAuth.getInstance().signOut();
 
                             //redirect the user to the login screen
@@ -155,6 +212,10 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+
+
+
     /**
      * Return true if @param 's1' matches @param 's2'
      * @param s1
