@@ -59,7 +59,6 @@ public class ViewRoomsActivity extends Activity {
 
 
 
-
         setContentView(R.layout.activity_view_room);
         recyclerView = findViewById(R.id.room_recycler_view);
 

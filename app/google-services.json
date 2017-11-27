@@ -15,23 +15,47 @@
       },
       "oauth_client": [
         {
-          "client_id": "964196060317-d67oaqjphi43ka8m93io0tutegn7sp1q.apps.googleusercontent.com",
+          "client_id": "964196060317-e4274ujdi3njq4kcjfqc3sg9h4u8r5q6.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "mru.booking",
-            "certificate_hash": "1619b7232445713a3d0a0a659df5d77dfed4c515"
+            "certificate_hash": "1409a396b4da28c7243d5279ae4fa293dfcb1d9c"
           }
         },
         {
-          "client_id": "964196060317-4ofp9b6n4124i7hktr4jkvgaurb7oadu.apps.googleusercontent.com",
+          "client_id": "964196060317-4j8tv4m47k7g2s909r3bne91kl214tcs.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "mru.booking",
-            "certificate_hash": "e3f953da1684388d307551b5f69c60b839b94da0"
+            "certificate_hash": "4728c7454ce9bc941bcddbbf7ca1b819adaa0aa3"
           }
         },
         {
-          "client_id": "964196060317-dsliue0tee8k2mt3na21pb3fj1jfmd92.apps.googleusercontent.com",
+          "client_id": "964196060317-f3t8vtpd6ao25o3ropkioai74b2bdf2h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mru.booking",
+            "certificate_hash": "6b2dc7439cf8f962fef6081b820e3a0f3d3d72a1"
+          }
+        },
+        {
+          "client_id": "964196060317-l4g1u65cif8uopj2188g4h95ij8t9p27.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mru.booking",
+            "certificate_hash": "be7a0281addcb32c091da85e4b3d3729f59b7ab8"
+          }
+        },
+        {
+          "client_id": "964196060317-pup3m34fd3ldc8jm97mm34hklsi333qg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mru.booking",
+            "certificate_hash": "f8c45d478c4b4891f61e112bce8b656ea6f9c39e"
+          }
+        },
+        {
+          "client_id": "964196060317-as4imo6hdfks39ldhabeamgc29332ulv.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "mru.booking",
@@ -39,7 +63,7 @@
           }
         },
         {
-          "client_id": "964196060317-86fv9vb5c8gh50eph7bpbsmi5b82sjv8.apps.googleusercontent.com",
+          "client_id": "964196060317-jc9m7e6tmglsj5bhvp0aoelmsqh5ok9f.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "mru.booking",
@@ -47,11 +71,11 @@
           }
         },
         {
-          "client_id": "964196060317-p0mfbhs0jcqksm4f9sfpcd7fftd8jtcs.apps.googleusercontent.com",
+          "client_id": "964196060317-d67oaqjphi43ka8m93io0tutegn7sp1q.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "mru.booking",
-            "certificate_hash": "6e0329c787133397bc44d895a26d5cfa5b25c539"
+            "certificate_hash": "1619b7232445713a3d0a0a659df5d77dfed4c515"
           }
         },
         {
